@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./main.js" defer></script>
+
+    <style>
+        body {
+            height: 100vh;
+            display: grid;
+            place-content: center;
+            
+
+        }
+
+        form {
+            width: 300px;
+            height: 200px;
+            border: 1px solid gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+        }
+
+        form input {
+            text-align: center;
+        }
+
+        form * {
+            padding: 8px;
+        }
+    </style>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="pin">PIN</label>
+        <input type="text" name="pin" id="pin" autocomplete="off" maxlength="5">
+    </form>
+    <p id="result">
+        
+    </p>
+</body>
+</html>

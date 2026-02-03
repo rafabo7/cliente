@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ej-2-tennis</title>
+    <style>
+      td {
+        width: 180px;
+        height: 32px;
+        border: 1px solid grey;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script defer type="module" src="/src/main.js"></script>
+
+    <div id="marcador">
+      <table id="score-board">
+        <thead>
+          <tr>
+            <td>Jugador</td>
+            <td>Ptos</td>
+            <td>Juegos</td>
+          </tr>
+        </thead>
+        <tr class="player-1">
+          <td class="name"></td>
+          <td class="score"></td>
+          <td class="juegos"></td>
+        </tr>
+        <tr class="player-2">
+          <td class="name"></td>
+          <td class="score"></td>
+          <td class="juegos"></td>
+        </tr>
+      </table>
+      <button id="punto-1">Punto player one</button><button id="punto-2">Punto playyer two</button>
+      <hr>
+      <button id="inicio">Iniciar juego</button>
+    </div>
+  </body>
+</html>

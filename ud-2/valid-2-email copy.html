@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <labe>Enter your email<input type="email" name="email1" id="email"></labe>
+        <labe>Re-enter your email<input type="email" name="email2" id="email"></labe>
+    </form>
+
+    <script>
+
+        let [email1, email2] = document.querySelectorAll('input[type="email"]')
+
+        const checkEmails = (e) => {
+            let value1 = email1.value
+            let value2 = email2.value
+
+            if (value1 == value2) {
+                alert('email aceptado')
+
+            } else alert('los emails no coinciden')
+
+        }
+
+        email1.onchange = checkEmails
+        email2.onchange = checkEmails
+
+
+        
+
+
+    </script>
+</body>
+</html>

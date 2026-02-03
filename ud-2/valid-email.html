@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#">
+        <labe>Enter your email<input type="email" name="email" id="email"></labe>
+    </form>
+
+    <script>
+
+        const servidores = [ 'terra.es', 'myspace.com', 'arrakis.es', 'tuenti.es' ]
+
+        const form = document.querySelector('form')
+
+        let email = document.getElementById('email')
+        const emailFormat = new RegExp('^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,3}$', "ig")
+
+        
+
+        
+        email.onchange = () => {
+            
+            let [nombre, servidor] = email.value.split('@')
+            console.log({emailFormat})
+
+            console.log({nombre, servidor})
+            console.log(emailFormat.test(email))
+            
+            if ( emailFormat.test(email.value) && servidores.includes(servidor)) {
+                alert('email aceptado')
+
+            } else alert('email rechazado')
+        }
+
+        form.onsubmit = (e) => e.preventDefault()
+
+
+    </script>
+</body>
+</html>

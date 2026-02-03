@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#">
+
+        <select name="provincia" id="provincia">
+            <option value="" selected disabled hidden>Selecciona una provincia</option>
+            <option value="alicante">Alicante</option>
+            <option value="castellon">Castellón</option>
+            <option value="valencia">Valencia</option>
+        </select>
+
+        <select name="localidad" id="localidad">
+            <option value="" selected  hidden> Selecciona una localidad</option>
+        </select>
+
+
+
+    </form>
+
+    <script>
+
+        const provSelect = document.querySelector('#provincia')
+        const localidadSelect = document.querySelector('#localidad')
+
+        const localidadesDisponibles = {
+            alicante: [ 'Alicante ciudad', 'Elche', 'Orihuela' ],
+            castellon: [ 'Castellon de la Plana', 'Oropesa', 'Vinaroz' ],
+            valencia: [ 'Valencia ciudad', 'Torrent', 'Mislata' ]
+
+        }
+
+        function populateLocalidad (string) {
+
+            if (localidadSelect.children.length > 1){
+                localidadSelect.innerHTML = '<option value="" selected  hidden> Selecciona una localidad</option>'
+            }
+
+            let provincia = localidadesDisponibles[string]
+
+            for (it in provincia){
+
+
+                let option = document.createElement('option')
+                option.value = provincia[it].toLowerCase()
+                option.text = provincia[it]
+                
+
+                if ( string == 'valencia' && option.value == 'mislata' ){
+                    option.selected = true
+                    
+                    localidadSelect.removeChild(localidadSelect.children[0])
+
+                }
+
+               
+
+                localidadSelect.appendChild(option)
+
+            }
+
+
+        }
+
+        function provOnChange () {
+            
+            let seleccion = provSelect.options[provSelect.selectedIndex].value
+
+            populateLocalidad(seleccion)
+
+        }
+
+        provSelect.onchange = provOnChange
+
+    </script>
+
+</body>
+</html>

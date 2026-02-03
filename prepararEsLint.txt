@@ -1,0 +1,11 @@
+Crear proyecto: yarn create vite mi-proyecto --template vanilla
+
+Entrar en la carpeta: cd mi-proyecto
+
+Instalar ESLint: yarn add -D eslint
+
+Crear archivo eslint.config.js con este contenido:
+import config from /ruta/a/tu/linter/eslint.config.js;
+export default config;
+
+Abrir en VS Code con la extensión ESLint activada.

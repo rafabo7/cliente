@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tema 1</h1>
+        <div>
+            <h2>Apartado 1</h2>
+        </div>
+    <h2>Apartado 2</h2>
+    <h1>Tema 2</h1>
+    <h2>Introducción</h2>
+
+
+    <script>
+
+        const body = document.body
+
+        let preformatted = document.createElement('pre')
+
+        
+        let titulos = document.querySelectorAll('h1, h2, h3')
+        console.log({titulos})
+
+        let parseTitulos = []
+
+        for ( el of titulos ) {
+            parseTitulos.push( {nivel: parseInt(el.tagName[1]), texto: el.textContent} )
+        }
+
+        console.log({parseTitulos})
+
+        // let contador = [0,0,0,0]
+
+        let apartado = 0
+        let subApartado = 0
+
+        for ( let i = 0; i < parseTitulos.length; i++ ) {
+            let nuevaLinea = ``
+            let item = parseTitulos[i]
+            if ( item.nivel == 1) {
+                apartado++
+                nuevaLinea = `${" ".repeat( item.nivel*2 )}${apartado}. ${item.texto} \n  `
+            }
+            if ( item.nivel == 2 ) {
+                subApartado++
+                nuevaLinea = `${" ".repeat( item.nivel*2 )}${apartado}.${subApartado} ${item.texto} \n  `
+            }
+
+            preformatted.textContent += nuevaLinea
+
+        }
+
+        body.appendChild(preformatted)
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+html, input, button {
+  font-size: 18px;
+}
+
+.list-container{
+  height: 500px;
+  width: 700px;
+  border: 1px solid gray;
+  overflow-y: scroll;
+  margin: 12px 0;
+}
+
+.storage-actions{
+  margin: 12px 0;
+}

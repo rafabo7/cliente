@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+
+<body style="height: 100vh;">
+
+    <p>soy autodestructible 1</p>
+    <p>soy autodestructible 2</p>
+    <p>soy autodestructible 3</p>
+    <p>soy autodestructible 4</p>
+    <p>soy autodestructible 5</p>
+    <p>soy autodestructible 6</p>
+    <p>soy autodestructible 7</p>
+    <p>soy autodestructible 8</p>
+    <p>soy autodestructible 9</p>
+    <p>soy autodestructible 10</p>
+
+    
+</body>
+
+ <script defer>
+
+        console.log('funciona?')
+
+        const autodestruccion = (e) => {
+            console.log(e)
+            let currentPar = e.target
+            console.log(currentPar)
+
+            currentPar.remove()
+        }
+
+        const ocultar = (e) => {
+            e.preventDefault()
+            let currentPar = e.target
+            console.log(currentPar)
+
+            currentPar.style.color = 'white'
+        }
+
+        const allPar = document.querySelectorAll('p')
+        
+        
+        for (par of allPar){
+            par.style.cursor = 'pointer'
+            par.addEventListener( 'click', autodestruccion )
+            par.addEventListener( 'contextmenu', ocultar )
+        }
+
+    </script>
+
+
+</html>

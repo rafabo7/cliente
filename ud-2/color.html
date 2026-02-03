@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="height: 100vh;">
+
+    <div style="display: flex; flex-direction: row; gap: 20px;" >
+        <div  class="child" style="width: 100px; height: 100px; background-color: blue;" ></div>
+        <div  class="child" style="width: 100px; height: 100px; background-color: red;" ></div>
+        <div  class="child" style="width: 100px; height: 100px; background-color: green;" ></div>
+    </div>
+    
+
+    <script>
+
+        const body = document.body
+
+        const colorHijo = (e) => {
+            
+            const target = e.target
+
+
+            let parent = target.parentNode
+            
+            parent.style.backgroundColor = target.style.backgroundColor
+        }
+
+        let divs = body.querySelectorAll('.child')
+
+        for (div of divs){
+            div.addEventListener( 'click', colorHijo )
+            div.style.border = '1px solid black'
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.poke-sprite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.poke-sprite img {
+  width: 300px;
+}
