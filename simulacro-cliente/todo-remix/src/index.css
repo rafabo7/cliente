@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background: #eee;
+  color: #222;
+  min-height: 100vh;
+}
+
+.app {
+  width: 400px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.formulario {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.active {
+  background-color: #a6eba8;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+}
+
+.tarea {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.texto.completada {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.prioridad {
+  margin-left: 10px;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.prioridad.baja {
+  background: #c8e6c9;
+}
+
+.prioridad.media {
+  background: #fff9c4;
+}
+
+.prioridad.alta {
+  background: #ffcdd2;
+}
+
+.controls {
+  display: flex;
+  flex-grow: 1;
+  justify-content: end;
+  gap: 1.2rem;
+}
+
+.todo-text {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #eee;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid #333;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #eee;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  background-color: #ccc;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
