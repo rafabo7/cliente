@@ -3,11 +3,11 @@
 // npm install; npm install @reduxjs/toolkit; npm install react-redux
 
 import { configureStore } from "@reduxjs/toolkit";
-import feature from "./NombreSlice";
+import numbers from "./numbersSlice";
 
 const store = configureStore({
     reducer: {
-        feature
+        numbers
     }
 })
 
