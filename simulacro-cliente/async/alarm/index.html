@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./alarm.js"></script>
+    <style>
+        #output {
+            font-size: 2rem;
+            font-weight: bold;
+
+        }
+    </style>
+    <title>Alarm</title>
+</head>
+<body>
+
+    <label for="">
+        The person to wake up:
+        <input type="text" name="name" id="name" placeholder="Maraia Carey"></label>
+
+    <label for="">
+        Time for the alar (in seconds):
+        <input type="number" min="1" max="10" name="delay" id="delay" placeholder="1"></label>
+
+    <button id="alarm-btn" >Set alarm</button>
+    <div id="output"></div>
+    
+</body>
+</html>
